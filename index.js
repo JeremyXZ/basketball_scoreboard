@@ -5,22 +5,24 @@ const guestBtn = document.querySelector('#guest')
 const resetBtn = document.querySelector('#reset')
 
 homeBtn.addEventListener('click', event => {
-    const homeScore = parseInt(homeScoreEl.textContent)
-    const guestScore = parseInt(guestScoreEl.textContent)
+    const homeScore = +homeScoreEl.textContent
+    const guestScore = +guestScoreEl.textContent
    
-    const scoreAdded = parseInt(event.target.dataset.value)
+    const scoreAdded = +event.target.dataset.value
     homeScoreEl.textContent = homeScore + scoreAdded
-    highLightScore(homeScoreEl.textContent, guestScoreEl.textContent)
+    highLightScore(+homeScoreEl.textContent, +guestScoreEl.textContent)
+    
 } )
 
 guestBtn.addEventListener('click', event => {
-    const homeScore = parseInt(homeScoreEl.textContent)
-    const guestScore = parseInt(guestScoreEl.textContent)
+    const homeScore = +homeScoreEl.textContent
+    const guestScore = +guestScoreEl.textContent
 
  
-    const scoreAdded = parseInt(event.target.dataset.value)
+    const scoreAdded = +event.target.dataset.value
     guestScoreEl.textContent = guestScore + scoreAdded
-    highLightScore(homeScoreEl.textContent, guestScoreEl.textContent)
+    highLightScore(+homeScoreEl.textContent, +guestScoreEl.textContent)
+    
 } )
 
 resetBtn.addEventListener('click', event => {
